@@ -2,10 +2,19 @@
 
 It’s Nintendo Network Authorization Helper.
 
-## License
 
-Under MIT license.
+## Requirement
 
-## Contact
+Nothing
 
-mntone (name: monotone): reply to [@mntone](https://twitter.com/mntone/) directly
+
+## LICENSE
+
+[MIT License](https://github.com/mntone/NintendoNetworkHelper/blob/master/LICENSE.txt)
+
+
+## Author
+
+- mntone<br>
+	GitHub: https://github.com/mntone<br>
+	Twitter: https://twitter.com/mntone (posted in Japanese; however, english is ok)
