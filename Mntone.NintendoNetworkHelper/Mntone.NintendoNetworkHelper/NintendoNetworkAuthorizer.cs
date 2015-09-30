@@ -78,6 +78,12 @@ namespace Mntone.NintendoNetworkHelper
 			})).ContinueWith(r =>
 			{
 				var result = r.Result;
+				if (result.StatusCode == HttpStatusCode.OK)
+				{
+					var content = result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+					if (content.Contains("hb-error-wrapper")) throw new NintendoNetworkException(Messages.NnidOrPasswordIsIncorrect);
+					throw new NintendoNetworkException(Messages.CannotGetAccessToken);
+				}
 				if (result.StatusCode != HttpStatusCode.RedirectMethod)
 				{
 					throw new NintendoNetworkException(Messages.CannotGetAccessToken);
