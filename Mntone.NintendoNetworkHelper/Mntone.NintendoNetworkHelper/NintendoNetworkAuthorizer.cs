@@ -141,8 +141,8 @@ namespace Mntone.NintendoNetworkHelper
 					this._Client = new HttpClient(this._clientHandler, true);
 					this._Client.DefaultRequestHeaders.Add("user-agent",
 						!string.IsNullOrEmpty(this.AdditionalUserAgent)
-							? $"NintendoNetworkHelper/{AssemblyHelpers.GetAssemblyVersionText(this.GetType())} ({this.AdditionalUserAgent})"
-							: $"NintendoNetworkHelper/{AssemblyHelpers.GetAssemblyVersionText(this.GetType())}");
+							? $"{AssemblyInfo.QualifiedName}/{AssemblyInfo.Version} ({this.AdditionalUserAgent})"
+							: $"{AssemblyInfo.QualifiedName}/{AssemblyInfo.Version}");
 				}
 				return this._Client;
 			}
