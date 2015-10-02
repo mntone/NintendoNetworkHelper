@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="AccessToken.cs" />
     <Compile Include="AuthenticationToken.cs" />
+    <Compile Include="Internal\AssemblyHelpers.cs" />
     <Compile Include="Internal\Messages.cs" />
     <Compile Include="NintendoNetworkAuthorizer.cs" />
     <Compile Include="Internal\UriExtensions.cs" />

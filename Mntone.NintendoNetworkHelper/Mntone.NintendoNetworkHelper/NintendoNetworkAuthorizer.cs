@@ -12,6 +12,8 @@ namespace Mntone.NintendoNetworkHelper
 	{
 		private const string AUTHORIZE_URI = "https://id.nintendo.net/oauth/authorize";
 
+		private bool _disposed = false;
+
 		public Task<RequestToken> GetRequestTokenAsync(string requestTokenUriText, HttpContent value = null)
 			=> this.GetRequestTokenAsync(new Uri(requestTokenUriText), value);
 
@@ -104,9 +106,23 @@ namespace Mntone.NintendoNetworkHelper
 
 		public void Dispose()
 		{
+			this.Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+
+		private void Dispose(bool disposing)
+		{
+			if (this._disposed) return;
+			if (disposing) this.Release();
+			this._disposed = true;
+		}
+
+		private void Release()
+		{
 			if (this._Client != null)
 			{
 				this._Client.Dispose();
+				this._clientHandler = null;
 				this._Client = null;
 			}
 		}
@@ -123,11 +139,28 @@ namespace Mntone.NintendoNetworkHelper
 						AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip,
 					};
 					this._Client = new HttpClient(this._clientHandler, true);
+					this._Client.DefaultRequestHeaders.Add("user-agent",
+						!string.IsNullOrEmpty(this.AdditionalUserAgent)
+							? $"NintendoNetworkHelper/{AssemblyHelpers.GetAssemblyVersionText(this.GetType())} ({this.AdditionalUserAgent})"
+							: $"NintendoNetworkHelper/{AssemblyHelpers.GetAssemblyVersionText(this.GetType())}");
 				}
 				return this._Client;
 			}
 		}
 		public HttpClientHandler _clientHandler = null;
 		private HttpClient _Client = null;
+
+		public string AdditionalUserAgent
+		{
+			get { return this._AdditionalUserAgent; }
+			set
+			{
+				if (this._AdditionalUserAgent == value) return;
+
+				this._AdditionalUserAgent = value;
+				this.Release();
+			}
+		}
+		private string _AdditionalUserAgent = null;
 	}
 }
