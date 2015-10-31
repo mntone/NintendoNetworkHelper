@@ -1,0 +1,1 @@
+nuget pack .\Mntone.NintendoNetworkHelper\Mntone.NintendoNetworkHelper\Mntone.NintendoNetworkHelper.csproj -Properties Configuration=Release;Platform=AnyCPU

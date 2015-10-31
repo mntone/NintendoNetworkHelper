@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>$id$</id>
+        <title>$title$</title>
+        <version>$version$</version>
+        <authors>$author$</authors>
+        <owners>$author$</owners>
+        <description>$description$</description>
+        <projectUrl>https://github.com/mntone/NintendoNetworkHelper</projectUrl>
+        <licenseUrl>https://github.com/mntone/NintendoNetworkHelper/blob/master/LICENSE.text</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <copyright>Copyright (C) 2015- mntone</copyright>
+        <language>en-US</language>
+        <tags>Nintendo NintendoNetwork</tags>
+    </metadata>
+</package>

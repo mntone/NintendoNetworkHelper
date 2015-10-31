@@ -3,13 +3,13 @@ using System.Reflection;
 using Mntone.NintendoNetworkHelper.Internal;
 
 [assembly: AssemblyTitle(AssemblyInfo.Name)]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Nintendo Network Authorization Helper")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany(AssemblyInfo.Author)]
 [assembly: AssemblyProduct(AssemblyInfo.Name)]
 [assembly: AssemblyCopyright("Copyright (C) 2015- " + AssemblyInfo.Author)]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCulture("en-us")]
 [assembly: NeutralResourcesLanguage("en")]
 
 [assembly: AssemblyVersion(AssemblyInfo.Version)]
