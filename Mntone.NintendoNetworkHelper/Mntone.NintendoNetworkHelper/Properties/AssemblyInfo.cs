@@ -2,18 +2,18 @@
 using System.Reflection;
 using Mntone.NintendoNetworkHelper.Internal;
 
-[assembly: AssemblyTitle(AssemblyInfo.Name)]
+[assembly: AssemblyTitle(AssemblyInfo.QualifiedName)]
 [assembly: AssemblyDescription("Nintendo Network Authorization Helper")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany(AssemblyInfo.Author)]
-[assembly: AssemblyProduct(AssemblyInfo.Name)]
+[assembly: AssemblyProduct(AssemblyInfo.QualifiedName)]
 [assembly: AssemblyCopyright("Copyright (C) 2015- " + AssemblyInfo.Author)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("en-us")]
 [assembly: NeutralResourcesLanguage("en")]
 
-[assembly: AssemblyVersion(AssemblyInfo.Version)]
-[assembly: AssemblyFileVersion(AssemblyInfo.Version)]
+[assembly: AssemblyVersion("0.9.0.0")]
+[assembly: AssemblyFileVersion("0.9.0.0")]
 
 namespace Mntone.NintendoNetworkHelper.Internal
 {
@@ -21,7 +21,6 @@ namespace Mntone.NintendoNetworkHelper.Internal
 	{
 		public const string Name = "Mntone.NintendoNetworkHelper";
 		public const string QualifiedName = "NintendoNetworkHelper";
-		public const string Version = "0.9.0.0";
 		public const string Author = "mntone";
 	}
 }
