@@ -1,6 +1,6 @@
 # Nintendo Network Helper
 
-[![Build status](https://img.shields.io/appveyor/ci/mntone/NintendoNetworkHelper/master.svg?style=flat-square)](https://ci.appveyor.com/project/mntone/NintendoNetworkHelper) [![License](https://img.shields.io/github/license/mntone/NintendoNetworkHelper.svg?style=flat-square)](https://github.com/mntone/NintendoNetworkHelper/blob/master/LICENSE.txt)
+[![Build status](https://img.shields.io/appveyor/ci/mntone/NintendoNetworkHelper/master.svg?style=flat-square)](https://ci.appveyor.com/project/mntone/NintendoNetworkHelper) [![NuGet](https://img.shields.io/nuget/v/Mntone.NintendoNetworkHelper.svg?style=flat-square)](https://www.nuget.org/packages/Mntone.NintendoNetworkHelper/) [![Downloads](https://img.shields.io/nuget/dt/Mntone.NintendoNetworkHelper.svg?style=flat-square)](https://www.nuget.org/packages/Mntone.NintendoNetworkHelper/) [![License](https://img.shields.io/github/license/mntone/NintendoNetworkHelper.svg?style=flat-square)](https://github.com/mntone/NintendoNetworkHelper/blob/master/LICENSE.txt)
 
 It’s Nintendo Network Authorization Helper.
 
