@@ -21,6 +21,7 @@ namespace Mntone.NintendoNetworkHelper.Internal
 	{
 		public const string Name = "Mntone.NintendoNetworkHelper";
 		public const string QualifiedName = "NintendoNetworkHelper";
+		public const string Version = "0.9.0.0";
 		public const string Author = "mntone";
 	}
 }
