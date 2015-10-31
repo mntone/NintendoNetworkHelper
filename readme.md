@@ -1,5 +1,7 @@
 # Nintendo Network Helper
 
+[![Build status](https://img.shields.io/appveyor/ci/mntone/NintendoNetworkHelper/master.svg?style=flat-square)](https://ci.appveyor.com/project/mntone/NintendoNetworkHelper) [![License](https://img.shields.io/github/license/mntone/NintendoNetworkHelper.svg?style=flat-square)](https://github.com/mntone/NintendoNetworkHelper/blob/master/LICENSE.txt)
+
 It’s Nintendo Network Authorization Helper.
 
 
