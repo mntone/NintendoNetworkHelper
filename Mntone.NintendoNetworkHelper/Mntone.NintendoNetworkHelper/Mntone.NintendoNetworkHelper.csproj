@@ -40,6 +40,7 @@
     <Compile Include="AccessToken.cs" />
     <Compile Include="AuthenticationToken.cs" />
     <Compile Include="Internal\Messages.cs" />
+    <Compile Include="Internal\PatchedHttpClientHandler.cs" />
     <Compile Include="NintendoNetworkAuthorizer.cs" />
     <Compile Include="Internal\UriExtensions.cs" />
     <Compile Include="NintendoNetworkException.cs" />

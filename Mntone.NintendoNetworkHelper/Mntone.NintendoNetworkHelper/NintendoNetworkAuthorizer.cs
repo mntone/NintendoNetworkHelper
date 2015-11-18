@@ -138,7 +138,7 @@ namespace Mntone.NintendoNetworkHelper
 						AllowAutoRedirect = false,
 						AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip,
 					};
-					this._Client = new HttpClient(this._clientHandler, true);
+					this._Client = new HttpClient(PatchedHttpClientHandler.PatchOrDefault(this._clientHandler));
 					this._Client.DefaultRequestHeaders.Add("user-agent",
 						!string.IsNullOrEmpty(this.AdditionalUserAgent)
 							? $"{AssemblyInfo.QualifiedName}/{AssemblyInfo.Version} ({this.AdditionalUserAgent})"
