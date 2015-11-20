@@ -13,6 +13,7 @@ namespace Mntone.NintendoNetworkHelper
 		private const string AUTHORIZE_URI = "https://id.nintendo.net/oauth/authorize";
 
 		private bool _disposed = false;
+		private bool _isUwp = false;
 
 		public Task<RequestToken> GetRequestTokenAsync(string requestTokenUriText, HttpContent value = null)
 			=> this.GetRequestTokenAsync(new Uri(requestTokenUriText), value);
@@ -99,7 +100,12 @@ namespace Mntone.NintendoNetworkHelper
 				{
 					throw new NintendoNetworkException(Messages.CannotGetAccessToken);
 				}
-				var sessionValue = sessionValueGetter(this._clientHandler.CookieContainer);
+
+				var sessionValue = this._isUwp ? HttpClientHelper.ProcessResponseCookies(result, sessionValueGetter) : sessionValueGetter(this._clientHandler.CookieContainer);
+				if (sessionValueGetter == null)
+				{
+					throw new NintendoNetworkException(Messages.CannotGetAccessToken);
+				}
 				return new AccessToken(authenticationToken.UserName, requestToken.ClientID, sessionValue);
 			});
 		}
@@ -138,7 +144,8 @@ namespace Mntone.NintendoNetworkHelper
 						AllowAutoRedirect = false,
 						AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip,
 					};
-					this._Client = new HttpClient(PatchedHttpClientHandler.PatchOrDefault(this._clientHandler));
+					this._isUwp = HttpClientHelper.IsUwpHttpClient(this._clientHandler);
+					this._Client = new HttpClient(this._clientHandler);
 					this._Client.DefaultRequestHeaders.Add("user-agent",
 						!string.IsNullOrEmpty(this.AdditionalUserAgent)
 							? $"{AssemblyInfo.QualifiedName}/{AssemblyInfo.Version} ({this.AdditionalUserAgent})"

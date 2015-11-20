@@ -12,8 +12,8 @@ using Mntone.NintendoNetworkHelper.Internal;
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
 
-[assembly: AssemblyVersion("0.9.1.0")]
-[assembly: AssemblyFileVersion("0.9.1.0")]
+[assembly: AssemblyVersion("0.9.1.1")]
+[assembly: AssemblyFileVersion("0.9.1.1")]
 
 namespace Mntone.NintendoNetworkHelper.Internal
 {
@@ -22,7 +22,7 @@ namespace Mntone.NintendoNetworkHelper.Internal
 		public const string Name = "Mntone.NintendoNetworkHelper";
 		public const string QualifiedName = "NintendoNetworkHelper";
 		public const string Description = "Nintendo Network Authorization Helper";
-		public const string Version = "0.9.1.0";
+		public const string Version = "0.9.1.1";
 		public const string Author = "mntone";
 	}
 }
